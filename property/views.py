@@ -13,7 +13,7 @@ class PropertyList(FilterView):
   model = Property
   filterset_class = PropertyFilter
   template_name = 'property/property_list.html'
-  paginate_by = 1
+  paginate_by = 2
   
   
   

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'settings',
     
     # 3rd party apps
+    'rest_framework',
     'taggit',
     "bootstrap4",
     'django_filters',

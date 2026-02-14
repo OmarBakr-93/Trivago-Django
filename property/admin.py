@@ -6,9 +6,13 @@ from django_summernote.admin import SummernoteModelAdmin
 
 class SomeModelAdmin(SummernoteModelAdmin): 
     summernote_fields = '__all__'
-
+    list_display= ['name' , 'price', 'check_availability' , 'get_avg_rating']
 admin.site.register(Property, SomeModelAdmin)
-admin.site.register(Property_book)
+
+class propertyBookAdmin(admin.ModelAdmin): 
+    list_display = ['property', 'in_progress']
+admin.site.register(Property_book, propertyBookAdmin)
+
 admin.site.register(Property_Review)
 admin.site.register(property_images)
 admin.site.register(Place)

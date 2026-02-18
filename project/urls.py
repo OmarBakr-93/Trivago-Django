@@ -12,7 +12,9 @@ urlpatterns = [
     path('blog/', include('blog.urls', namespace='blog')),
     path('summernote/', include('django_summernote.urls')),
     path('',include('settings.urls', namespace='home')),
-    path('about/', include('about.urls', namespace='about')),
+    path('about/', include('about.urls', namespace='about')),path('api-auth/', include('rest_framework.urls')),
+    path('auth/', include('dj_rest_auth.urls')),
+    path('auth/registration/', include('dj_rest_auth.registration.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.       MEDIA_ROOT)
